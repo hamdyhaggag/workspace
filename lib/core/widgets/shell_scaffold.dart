@@ -132,23 +132,13 @@ class _DesktopLayout extends ConsumerWidget {
               const SizedBox(height: 24),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 32,
-                      height: 32,
-                      decoration: BoxDecoration(
-                        color: AppColors.primary,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: const Icon(Icons.workspaces_rounded, color: AppColors.background, size: 18),
-                    ),
-                    const SizedBox(width: 10),
-                    const Text('Workbench', style: AppTextStyles.headlineMedium),
-                  ],
+                child: Image.asset(
+                  'assets/images/logo.jpg',
+                  height: 80,
+                  fit: BoxFit.contain,
                 ),
               ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 24),
               ..._navItems.map((item) {
                 final isActive = location == item.path ||
                     (item.path != '/' && location.startsWith(item.path));
@@ -249,14 +239,15 @@ class _TabletLayout extends ConsumerWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              Container(
-                width: 36,
-                height: 36,
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(10),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  'assets/images/logo.jpg',
+                  width: 36,
+                  height: 36,
+                  alignment: Alignment.topCenter,
+                  fit: BoxFit.cover,
                 ),
-                child: const Icon(Icons.workspaces_rounded, color: AppColors.background, size: 20),
               ),
               const SizedBox(height: 24),
               ..._navItems.map((item) {

@@ -22,25 +22,17 @@ class LoginScreen extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Logo
-                Container(
-                  width: 72,
-                  height: 72,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppColors.primary.withValues(alpha: 0.3)),
+                // Brand Logo
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'assets/images/logo.jpg',
+                    width: 200,
+                    height: 200,
+                    fit: BoxFit.contain,
                   ),
-                  child: const Icon(Icons.workspaces_rounded, color: AppColors.primary, size: 36),
                 ),
-                const SizedBox(height: 24),
-                const Text('Workbench', style: AppTextStyles.displayLarge),
-                const SizedBox(height: 8),
-                Text(
-                  'مساحتك الشخصية للشغل',
-                  style: AppTextStyles.bodyLarge.copyWith(color: AppColors.textSecondary),
-                ),
-                const SizedBox(height: 48),
+                const SizedBox(height: 32),
 
                 // Sign in card
                 Container(
