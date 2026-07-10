@@ -51,6 +51,8 @@ class _ShellScaffoldState extends ConsumerState<ShellScaffold> {
     final width = MediaQuery.sizeOf(context).width;
     final isDesktop = width >= 1024;
     final isTablet = width >= 640 && width < 1024;
+    final location = GoRouterState.of(context).matchedLocation;
+    final showFab = location != '/';
 
     return KeyboardListener(
       focusNode: FocusNode(),
@@ -64,7 +66,7 @@ class _ShellScaffoldState extends ConsumerState<ShellScaffold> {
                 : isTablet
                     ? _TabletLayout(child: widget.child)
                     : _MobileLayout(child: widget.child),
-            floatingActionButton: QuickAddFab(),
+            floatingActionButton: showFab ? const QuickAddFab() : null,
           ),
           if (_showCommandPalette)
             CommandPalette(
