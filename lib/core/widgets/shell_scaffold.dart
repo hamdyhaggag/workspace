@@ -52,7 +52,19 @@ class _ShellScaffoldState extends ConsumerState<ShellScaffold> {
     final isDesktop = width >= 1024;
     final isTablet = width >= 640 && width < 1024;
     final location = GoRouterState.of(context).matchedLocation;
-    final showFab = location != '/';
+
+    // Hide FAB on navigation pages and forms
+    final hideFabRoutes = ['/', '/projects', '/search', '/settings', '/add', '/archive', '/trash'];
+    final showFab = !hideFabRoutes.contains(location) && !location.endsWith('/edit');
+
+    // Extract project ID to link added items
+    String? defaultProjectId;
+    if (location.startsWith('/projects/') && location != '/projects') {
+      final segments = location.split('/');
+      if (segments.length > 2) {
+        defaultProjectId = segments[2];
+      }
+    }
 
     return KeyboardListener(
       focusNode: FocusNode(),
@@ -66,7 +78,7 @@ class _ShellScaffoldState extends ConsumerState<ShellScaffold> {
                 : isTablet
                     ? _TabletLayout(child: widget.child)
                     : _MobileLayout(child: widget.child),
-            floatingActionButton: showFab ? const QuickAddFab() : null,
+            floatingActionButton: showFab ? QuickAddFab(defaultProjectId: defaultProjectId) : null,
           ),
           if (_showCommandPalette)
             CommandPalette(
