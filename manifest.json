@@ -3,9 +3,9 @@
     "short_name": "workbench",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0F1115",
+    "theme_color": "#E3B119",
+    "description": "Workbench - Personal Work Hub",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
