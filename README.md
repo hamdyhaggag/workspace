@@ -1,16 +1,80 @@
-# workbench
+<p align="center">
+  <img src="assets/images/logo.jpg" alt="Workbench Logo" width="200" style="border-radius: 20px;" />
+</p>
 
-A new Flutter project.
+# Workbench - Personal Work Hub
 
-## Getting Started
+**Workbench** is a production-ready, high-performance Progressive Web Application (PWA) built using Flutter and Firebase. It serves as an all-in-one personal station for managing, categorizing, and instantly searching resources like notes, templates, scripts, code snippets, URLs, API endpoints, and credentials. Fully localized in Egyptian Arabic.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features & UX Enhancements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* **⚡ Command Palette (`Ctrl + K`)**: Instant search overlay across the entire system. Supports full keyboard navigation (`Arrow Up / Down` to navigate, `Enter ⏎` to open).
+* **🖱️ Hover Interactions**: Elements subtly lift by `-3px` on mouse hover with an glowing primary borders.
+* **🔑 Account Management**: Mask/reveal password toggles directly on preview cards.
+* **📋 Quick Actions**: Instant header-row copying for snippets, links and passwords without reloading pages.
+* **💾 Contextual Save Controls**: Relocated actions direct-under forms for optimal workflow.
+* **📂 Folder Structure separation**: Separated container workspaces (Projects) and elements (Items).
+* **📦 PWA Support**: Optimized assets, manifest configurations, and custom web favicons for browser tabs.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**: Flutter Web (Cairo Google Font, RTL localization)
+* **State Management**: flutter_riverpod (v2)
+* **Routing**: go_router
+* **Backend**: Firebase Auth (Google Sign-In) & Cloud Firestore
+* **Styling**: AppColors Design System (Dark Slate `#0F1115` & Gold Primary `#E3B119`)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Flutter SDK `^3.9.2`
+* Firebase CLI installed (`npm install -g firebase-tools`)
+
+### Setup and Running
+
+1. Clone this repository to your local development machine.
+2. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+3. Run the development server locally:
+   ```bash
+   flutter run -d chrome
+   ```
+
+### Deploying Firestore Rules & Indexes
+
+Workbench relies on complex queries and security constraints. Run these commands to synchronize your Firebase security settings and composite indexes:
+
+```bash
+firebase deploy --only firestore:rules
+firebase deploy --only firestore:indexes
+```
+
+---
+
+## 📂 Codebase Anatomy
+
+```
+lib/
+├── core/                         # Core utilities, constants, shared widgets, and routers
+│   ├── constants/                # Global style constants (Colors, Text Styles)
+│   ├── router/                   # Navigation paths and router configurations
+│   └── widgets/                  # App-wide widgets (ShellScaffold, CommandPalette)
+│
+└── features/                     # Feature directories containing Clean Architecture layers
+    ├── auth/                     # Authentication workflow (Sign-In page, Google Providers)
+    ├── home/                     # Dynamic Home Dashboard (Metrics, Pinned items, recent history)
+    ├── items/                    # Item entity lifecycle (Notes, links, code, APIs, credentials)
+    ├── projects/                 # Project container manager
+    ├── search/                   # Client-side filtering & search screens
+    └── settings/                 # App parameters (Stats, profile, signout)
+```
+
