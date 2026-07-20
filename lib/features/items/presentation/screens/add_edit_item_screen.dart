@@ -471,7 +471,7 @@ class _AddEditItemScreenState extends ConsumerState<AddEditItemScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             DropdownButtonFormField<String>(
-              value: block.codeLanguage,
+              initialValue: block.codeLanguage,
               dropdownColor: AppColors.card,
               style: AppTextStyles.bodyMedium,
               decoration: const InputDecoration(labelText: 'اللغة'),
@@ -497,7 +497,7 @@ class _AddEditItemScreenState extends ConsumerState<AddEditItemScreen> {
                 SizedBox(
                   width: 110,
                   child: DropdownButtonFormField<String>(
-                    value: block.method,
+                    initialValue: block.method,
                     dropdownColor: AppColors.card,
                     style: AppTextStyles.bodyMedium,
                     decoration: const InputDecoration(labelText: 'الميثود'),
