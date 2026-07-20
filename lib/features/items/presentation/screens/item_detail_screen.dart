@@ -108,13 +108,7 @@ class _ItemDetailScreenState extends ConsumerState<ItemDetailScreen> {
                   Row(
                     children: [
                       IconButton(
-                        onPressed: () {
-                          if (context.canPop()) {
-                            context.pop();
-                          } else {
-                            context.go('/');
-                          }
-                        },
+                        onPressed: () => context.go('/'),
                         icon: const Icon(Icons.arrow_back_rounded, color: AppColors.textSecondary),
                       ),
                       const Spacer(),

@@ -143,7 +143,7 @@ class _AddEditItemScreenState extends ConsumerState<AddEditItemScreen> {
           headersJson: null, bodyJson: null, apiNotes: null,
         );
         await notifier.updateItem(updated);
-        if (mounted) context.pop();
+        if (mounted) context.go('/items/${_existingItem!.id}');
       } else {
         final id = await notifier.createItem(
           projectId: _projectId!,
@@ -162,7 +162,7 @@ class _AddEditItemScreenState extends ConsumerState<AddEditItemScreen> {
              final updated = createdItem.copyWith(blocks: itemBlocks);
              await notifier.updateItem(updated);
            }
-           if (mounted) context.pushReplacement('/items/$id');
+           if (mounted) context.go('/items/$id');
         }
       }
     } finally {
@@ -192,13 +192,7 @@ class _AddEditItemScreenState extends ConsumerState<AddEditItemScreen> {
                           Row(
                             children: [
                               IconButton(
-                                onPressed: () {
-                                  if (context.canPop()) {
-                                    context.pop();
-                                  } else {
-                                    context.go('/');
-                                  }
-                                },
+                                onPressed: () => context.go(_existingItem != null ? '/items/${_existingItem!.id}' : '/'),
                                 icon: const Icon(Icons.arrow_back_rounded, color: AppColors.textSecondary),
                               ),
                             ],
