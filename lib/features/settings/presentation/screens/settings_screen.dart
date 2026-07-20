@@ -154,7 +154,7 @@ class SettingsScreen extends ConsumerWidget {
                     children: [
                       _SettingsTile(
                         icon: Icons.workspaces_rounded,
-                        label: 'Workbench',
+                        label: 'WorkSpace',
                         trailing: Text('v1.0.0', style: AppTextStyles.caption),
                       ),
                       _SettingsTile(

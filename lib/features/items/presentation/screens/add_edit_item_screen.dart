@@ -5,7 +5,6 @@ import 'package:workbench/core/constants/app_colors.dart';
 import 'package:workbench/core/constants/app_text_styles.dart';
 import 'package:workbench/core/utils/item_utils.dart';
 import 'package:workbench/features/items/domain/entities/item_entity.dart';
-import 'package:workbench/features/items/domain/entities/item_block.dart';
 import 'package:workbench/features/items/presentation/providers/item_providers.dart';
 import 'package:workbench/features/projects/presentation/providers/project_providers.dart';
 import '../states/block_state.dart';

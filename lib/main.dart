@@ -27,7 +27,7 @@ class WorkbenchApp extends ConsumerWidget {
     final router = ref.watch(routerProvider);
 
     return MaterialApp.router(
-      title: 'Workbench',
+      title: 'WorkSpace',
       theme: AppTheme.dark,
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
