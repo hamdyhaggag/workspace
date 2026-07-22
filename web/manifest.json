@@ -1,11 +1,11 @@
 {
-    "name": "workbench",
-    "short_name": "workbench",
+    "name": "WorkSpace",
+    "short_name": "WorkSpace",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0F1115",
     "theme_color": "#E3B119",
-    "description": "Workbench - Personal Work Hub",
+    "description": "WorkSpace - Personal Work Hub",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

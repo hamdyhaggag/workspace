@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/images/readme_logo.jpg" alt="Workbench Logo" width="120" style="border-radius: 24px;" />
+  <img src="assets/images/readme_logo.jpg" alt="WorkSpace Logo" width="120" style="border-radius: 24px;" />
 </p>
 
-<h1 align="center">Workbench</h1>
+<h1 align="center">WorkSpace</h1>
 
 <p align="center">
   <strong>مساحتك . تنظيمك . إنتاجيتك</strong><br>
@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/Language-Arabic%20%28RTL%29-E3B119?style=flat-square" alt="Language" />
 </p>
 
-**Workbench** is a production-ready, high-performance Progressive Web Application (PWA) built using Flutter and Firebase. It serves as an all-in-one personal station for managing, categorizing, and instantly searching resources like notes, templates, scripts, code snippets, URLs, API endpoints, and credentials. Fully localized in Egyptian Arabic.
+**WorkSpace** is a production-ready, high-performance Progressive Web Application (PWA) built using Flutter and Firebase. It serves as an all-in-one personal station for managing, categorizing, and instantly searching resources like notes, templates, scripts, code snippets, URLs, API endpoints, and credentials. Fully localized in Egyptian Arabic.
 
 ---
 

@@ -201,7 +201,7 @@ class HomeScreen extends ConsumerWidget {
                 ? const SliverToBoxAdapter(child: SizedBox.shrink())
                 : SliverToBoxAdapter(
                     child: _Section(
-                      title: 'آخر اللي شغلت عليه',
+                      title: 'آخر اللي اشتغلت عليه',
                       icon: Icons.history_rounded,
                       child: ListView.separated(
                         shrinkWrap: true,

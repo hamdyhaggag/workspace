@@ -1,6 +1,6 @@
 class AppStrings {
   // App
-  static const appName = 'Workbench';
+  static const appName = 'WorkSpace';
   static const tagline = 'مساحة شغلك';
 
   // Navigation
@@ -49,7 +49,7 @@ class AppStrings {
   static const goodMorning = 'صباح الخير';
   static const goodAfternoon = 'مساء الخير';
   static const goodEvening = 'مساء النور';
-  static const recentlyUsed = 'آخر اللي شغلت عليه';
+  static const recentlyUsed = 'آخر اللي اشتغلت عليه';
   static const pinnedItems = 'المثبتات';
   static const recentProjects = 'المشاريع الأخيرة';
   static const quickStats = 'الإحصائيات';
@@ -100,7 +100,7 @@ class AppStrings {
 
   // Auth
   static const welcomeBack = 'أهلاً تاني';
-  static const signInToWorkbench = 'سجّل دخولك على Workbench';
+  static const signInToWorkbench = 'سجّل دخولك على WorkSpace';
   static const yourPersonalHub = 'مساحتك الشخصية للشغل';
 
   // Time
